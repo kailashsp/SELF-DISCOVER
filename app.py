@@ -4,12 +4,12 @@ from self_discover import SelfDiscover
 
 
 st.set_page_config(
-    page_title="Reasoning Structure Generator",
+    page_title="SELF-DISCOVER",
     page_icon="🔍",
     layout="wide",
     initial_sidebar_state="expanded"
 )
-st.title("Reasoning Structure Generator")
+st.title("SELF-DISCOVER")
 
 
 api_key = st.text_input("Enter OpenAI api key ")

@@ -10,6 +10,8 @@ license: apache-2.0
 
 ## SELF-DISCOVER FRAMEWORK
 
+[Try Hugging Face Demo from Here](https://huggingface.co/spaces/kailashsp/SELF-DISCOVER)
+
 ## Paper Overview [link](https://arxiv.org/pdf/2402.03620.pdf)
 This project implements the paper titled "Self-Discover: Large Language Models Self-Compose Reasoning Structures," submitted on February 6, 2024, by Pei Zhou, Jay Pujara, Xiang Ren, Xinyun Chen, Heng-Tze Cheng, Quoc V. Le, Ed H. Chi, Denny Zhou, Swaroop Mishra, and Huaixiu Steven Zheng. The paper introduces SELF-DISCOVER, a framework designed to enhance the performance of Large Language Models (LLMs) on complex reasoning tasks by enabling them to self-discover task-intrinsic reasoning structures.
 
