@@ -1,3 +1,13 @@
+---
+title: SELF-DISCOVER
+emoji: 🔍
+colorFrom: gray
+colorTo: pink
+sdk: streamlit
+pinned: false
+license: apache-2.0
+---
+
 ## SELF-DISCOVER FRAMEWORK
 
 ## Paper Overview [link](https://arxiv.org/pdf/2402.03620.pdf)

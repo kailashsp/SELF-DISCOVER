@@ -54,52 +54,33 @@ objectives?
 
 
 select_prompt = """
-Select several reasoning modules that are crucial to utilize in order solve the given task:
-All reasoning module description
-{resonining_modules}
+In order to solve the given task:
+<Task>
 {Task}
+</Task>
 Select several modules that are crucial for solving the tasks above
+from all the reasoning module description given below:
+{resonining_modules}
 """
 
 adapt_prompt = """
 Rephrase and specify each reasoning module so that it better helps solving the task:
+<Task>
+{Task}
+</Task>
 SELECTED module descriptions:
 {selected_modules}
-{Task}
-Adapt each reasoning module description to better solve the tasks:
+Adapt each reasoning module description to better solve the task:
 """
 
 implement_prompt = """
-Operationalize the reasoning modules into a step-by-step reasoning plan in JSON format:
-
-Paired IMPLEMENT step Demonstration
-Example:
-This SVG path element <path d="M 55.57,80.69 L 57.38,65.80 M 57.38,65.80 L 48.90,57.46 M 48.90,57.46 L
-45.58,47.78 M 45.58,47.78 L 53.25,36.07 L 66.29,48.90 L 78.69,61.09 L 55.57,80.69"/> draws a:
-(A) circle (B) heptagon (C) hexagon (D) kite (E) line (F) octagon (G) pentagon(H) rectangle (I) sector (J) triangle
-{ "Simplify SVG Path": ...
-"Breakdown of Path Commands": {
-"Move to Command (M)": "Sets the starting point for the next
-command without drawing anything.",
-"Line to Command (L) steps":
-{"Start and end coordinates of each line segment":
-"M 55.57,80.69 L 57.38,65.80: From point (55.57, 80.69) to (57.38,
-65.80)"}, … and finally closing the shape at (55.57, 80.69)"}
-"Critical Thinking Analysis": {
-"Logical Reasoning": {
-"Analysis of path continuity": "The path includes
-multiple line segments that connect distinct points. The path ends by
-connecting back to the starting point, indicating a closed shape.",
-"Identification of closed shapes": "The final line
-segment connects the last point back to the first point, which is
-characteristic of a closed shape."},
-…
-"Final Reasoning and Decision": "With 7 distinct points all
-connected in a closed path, the shape formed is a heptagon.",
-"Final Answer": "B) heptagon}
-
+Operationalize the reasoning modules into a step-by-step reasoning plan in JSON format
+Example task:
+<Task>
+{Task}
+</Task>
 ADAPTED module descriptions:
 {adapted_modules}
-{Task}
-Implement a reasoning structure for solvers to follow step-by-dtep and arrive at correct answers
+
+Implement a reasoning structure to generalise similar task to follow step-by-step and arrive at correct answers
 """
